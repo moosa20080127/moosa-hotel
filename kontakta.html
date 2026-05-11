@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakta – Hotell Bright</title>
+  <meta name="description" content="Kontakta Hotell Bright i Malmö. Vi svarar på dina frågor via telefon, e-post eller kontaktformulär. Välkommen att höra av dig!" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img src="loga.webp" alt="Hotell Bright logotyp" width="150" height="120" />
+    </div>
+    <img src="huvudbild.webp" class="header-img" alt="Exteriör av Hotell Bright med pool och hav i bakgrunden" width="1200" height="145" />
+  </header>
+
+  <!-- NAVIGERING -->
+  <nav aria-label="Huvudmeny">
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-inner" aria-label="Öppna meny">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-inner" id="nav-inner">
+      <a href="index.html">Välkommen</a>
+      <a href="boka.html">Boka</a>
+      <a href="hitta.html">Hitta</a>
+      <a href="kontakta.html" class="aktiv" aria-current="page">Kontakta</a>
+    </div>
+  </nav>
+
+  <!-- HUVUDINNEHÅLL -->
+  <main>
+    <div class="tva-kolumner">
+
+      <!-- Kontaktformulär -->
+      <div class="kort">
+        <h1>Kontakta oss</h1>
+
+        <form class="formular" action="javascript:void(0)" novalidate>
+
+          <div class="formular-rad">
+            <label for="namn">Namn</label>
+            <input type="text" id="namn" name="namn" placeholder="Ditt namn" autocomplete="name" />
+          </div>
+
+          <div class="formular-rad">
+            <label for="epost">E-post</label>
+            <input type="email" id="epost" name="epost" placeholder="din@epost.se" autocomplete="email" />
+          </div>
+
+          <div class="formular-rad">
+            <label for="amne">Ämne</label>
+            <input type="text" id="amne" name="amne" placeholder="Vad gäller det?" />
+          </div>
+
+          <div class="formular-rad">
+            <label for="meddelande">Meddelande</label>
+            <textarea id="meddelande" name="meddelande" placeholder="Skriv ditt meddelande här..."></textarea>
+          </div>
+
+          <button type="submit" class="skicka-knapp">Skicka meddelande</button>
+
+        </form>
+      </div>
+
+      <!-- Kontaktuppgifter -->
+      <div class="kort">
+        <h2>Kontaktuppgifter</h2>
+        <ul class="kontakt-lista">
+          <li>
+            <span class="ikon">📞</span>
+            <span>012–12 34 56</span>
+          </li>
+          <li>
+            <span class="ikon">✉️</span>
+            <span>info@hotellbright.se</span>
+          </li>
+          <li>
+            <span class="ikon">📍</span>
+            <span>Föreningsgatan 41, 211 50 Malmö</span>
+          </li>
+          <li>
+            <span class="ikon">🕐</span>
+            <span>Mån–Fre &nbsp; 08:00–20:00</span>
+          </li>
+          <li>
+            <span class="ikon">🕐</span>
+            <span>Lör–Sön &nbsp; 09:00–18:00</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SIDFOT -->
+  <footer>
+    <p>Hotell Bright &nbsp;|&nbsp; Föreningsgatan 41, &nbsp;21551 Malmö &nbsp;|&nbsp; 012–12 34 56</p>
+  </footer>
+
+</body>
+</html>

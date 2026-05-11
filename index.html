@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Välkommen – Hotell Bright</title>
+  <meta name="description" content="Välkommen till Hotell Bright i Malmö. Bekväma rum, centralt läge och personlig service. Boka ditt rum hos oss idag." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img src="loga.webp" alt="Hotell Bright logotyp" width="150" height="120" />
+    </div>
+    <img src="huvudbild.webp" class="header-img" alt="Exteriör av Hotell Bright med pool och hav i bakgrunden" width="1200" height="145" />
+  </header>
+
+  <!-- NAVIGERING -->
+  <nav aria-label="Huvudmeny">
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-inner" aria-label="Öppna meny">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-inner" id="nav-inner">
+      <a href="index.html" class="aktiv" aria-current="page">Välkommen</a>
+      <a href="boka.html">Boka</a>
+      <a href="hitta.html">Hitta</a>
+      <a href="kontakta.html">Kontakta</a>
+    </div>
+  </nav>
+
+  <!-- HUVUDINNEHÅLL -->
+  <main>
+    <div class="tva-kolumner">
+
+      <!-- Välkomsttext -->
+      <div class="kort">
+        <h1>Välkommen</h1>
+        <p>Välkommen till vårt hotell!</p>
+        <p>Vi är glada att ha dig här och hoppas att du får en trevlig vistelse.
+        Vårt hotell erbjuder bekväma och moderna rum med gratis Wi-Fi, TV
+        och allt du behöver för att känna dig som hemma.</p>
+        <p>Varje morgon serveras en god frukost, och vårt centrala läge gör det
+        enkelt att ta sig till shopping, restauranger och sevärdheter i området.</p>
+        <p>Har du frågor eller behöver hjälp finns vår reception alltid här för dig.</p>
+        <p>Vi önskar dig en härlig vistelse hos oss!</p>
+      </div>
+
+      <!-- Öppettider -->
+      <div class="kort">
+        <h2>Öppettider</h2>
+        <ul class="oppettider">
+          <li>🕐 <span class="dag">Måndag</span> 08:00–20:00</li>
+          <li>🕐 <span class="dag">Tisdag</span> 08:00–20:00</li>
+          <li>🕐 <span class="dag">Onsdag</span> 08:00–20:00</li>
+          <li>🕐 <span class="dag">Torsdag</span> 08:00–20:00</li>
+          <li>🕐 <span class="dag">Fredag</span> 08:00–20:00</li>
+          <li>🕐 <span class="dag">Lördag</span> 09:00–18:00</li>
+          <li>🕐 <span class="dag">Söndag</span> 08:00–18:00</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bildgalleri med slideshow -->
+    <h2 class="galleri-rubrik">Utforska hotellet</h2>
+    <div class="galleri">
+
+      <div class="galleri-bild">
+        <img src="spa.webp" alt="Hotellets avkopplande spa-avdelning" width="400" height="200" class="slideshow-bild aktiv-bild" />
+        <div class="galleri-text">Spa</div>
+      </div>
+
+      <div class="galleri-bild">
+        <img src="rum.webp" alt="Modernt och bekvämt dubbelrum" width="400" height="200" />
+        <div class="galleri-text">Rum</div>
+      </div>
+
+      <div class="galleri-bild">
+        <img src="gym.webp" alt="Välutrustat gym med modern träningsutrustning" width="400" height="200" />
+        <div class="galleri-text">Gym</div>
+      </div>
+
+      <div class="galleri-bild">
+        <img src="lobby.webp" alt="Elegant och välkomnande hotellobby" width="400" height="200" />
+        <div class="galleri-text">Lobby</div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SIDFOT -->
+  <footer>
+    <p>Hotell Bright &nbsp;|&nbsp; Föreningsgatan 41, &nbsp;21551 Malmö &nbsp;|&nbsp; 012–12 34 56</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hitta – Hotell Bright</title>
+  <meta name="description" content="Hitta till Hotell Bright på Föreningsgatan 41 i Malmö. Centralt beläget med goda kommunikationer och gratis parkering." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img src="loga.webp" alt="Hotell Bright logotyp" width="150" height="120" />
+    </div>
+    <img src="huvudbild.webp" class="header-img" alt="Exteriör av Hotell Bright med pool och hav i bakgrunden" width="1200" height="145" />
+  </header>
+
+  <!-- NAVIGERING -->
+  <nav aria-label="Huvudmeny">
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-inner" aria-label="Öppna meny">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-inner" id="nav-inner">
+      <a href="index.html">Välkommen</a>
+      <a href="boka.html">Boka</a>
+      <a href="hitta.html" class="aktiv" aria-current="page">Hitta</a>
+      <a href="kontakta.html">Kontakta</a>
+    </div>
+  </nav>
+
+  <!-- HUVUDINNEHÅLL -->
+  <main>
+    <div class="tva-kolumner">
+
+      <!-- Google-karta -->
+      <div class="kort">
+        <h1>Hitta hit</h1>
+        <div class="karta-wrapper">
+          <iframe
+            title="Karta över Hotell Bright i Malmö"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2252.7694846929996!2d13.003199515885814!3d55.60587038054166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a3f86aef6f29%3A0x6f0a94f9ee42a0dd!2sF%C3%B6reningsgatan%2041%2C%20211%2050%20Malm%C3%B6!5e0!3m2!1ssv!2sse!4v1681123456789!5m2!1ssv!2sse"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Vägbeskrivning -->
+      <div class="kort">
+        <h2>Hitta hit</h2>
+        <p><strong>Föreningsgatan 41, 211 50 Malmö</strong></p>
+
+        <ul class="mt-medium">
+          <li>🚂 15 min från centralstationen</li>
+          <li>🚌 Buss 5 och 7 stannar utanför</li>
+          <li>🚗 Gratis parkering tillgänglig</li>
+          <li>🚇 Närmaste spårvagn: Triangeln</li>
+          <li>✈️ 20 min från Malmö Airport</li>
+        </ul>
+
+        <h2 class="mt-large">Med bil</h2>
+        <p>Ta E6/E20 mot Malmö centrum och följ skyltning mot Föreningsgatan.
+        Gratis parkering finns i angränsande garage.</p>
+
+        <h2 class="mt-large">Med kollektivtrafik</h2>
+        <p>Från Malmö C ta buss 5 mot Husie och kliv av vid Föreningsgatan.
+        Resan tar ungefär 12 minuter.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SIDFOT -->
+  <footer>
+    <p>Hotell Bright &nbsp;|&nbsp; Föreningsgatan 41, &nbsp;21551 Malmö &nbsp;|&nbsp; 012–12 34 56</p>
+  </footer>
+
+</body>
+</html>

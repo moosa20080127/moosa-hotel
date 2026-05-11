@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boka – Hotell Bright</title>
+  <meta name="description" content="Boka rum på Hotell Bright i Malmö. Välj mellan enkelrum, dubbelrum och svit. Enkel och snabb bokning online." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img src="loga.webp" alt="Hotell Bright logotyp" width="150" height="120" />
+    </div>
+    <img src="huvudbild.webp" class="header-img" alt="Exteriör av Hotell Bright med pool och hav i bakgrunden" width="1200" height="145" />
+  </header>
+
+  <!-- NAVIGERING -->
+  <nav aria-label="Huvudmeny">
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-inner" aria-label="Öppna meny">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-inner" id="nav-inner">
+      <a href="index.html">Välkommen</a>
+      <a href="boka.html" class="aktiv" aria-current="page">Boka</a>
+      <a href="hitta.html">Hitta</a>
+      <a href="kontakta.html">Kontakta</a>
+    </div>
+  </nav>
+
+  <!-- HUVUDINNEHÅLL -->
+  <main>
+    <div class="tva-kolumner">
+
+      <!-- Bokningsformulär -->
+      <div class="kort">
+        <h1>Boka rum</h1>
+
+          <form class="formular" action="javascript:void(0)" novalidate>
+
+          <div class="formular-rad">
+            <label for="fornamn">Förnamn</label>
+            <input type="text" id="fornamn" name="fornamn" placeholder="Ditt förnamn" autocomplete="given-name" />
+          </div>
+
+          <div class="formular-rad">
+            <label for="efternamn">Efternamn</label>
+            <input type="text" id="efternamn" name="efternamn" placeholder="Ditt efternamn" autocomplete="family-name" />
+          </div>
+
+          <div class="formular-rad">
+            <label for="epost">E-post</label>
+            <input type="email" id="epost" name="epost" placeholder="din@epost.se" autocomplete="email" />
+          </div>
+
+          <div class="formular-rad">
+            <label for="incheckning">Incheckning</label>
+            <input type="date" id="incheckning" name="incheckning" />
+          </div>
+
+          <div class="formular-rad">
+            <label for="utcheckning">Utcheckning</label>
+            <input type="date" id="utcheckning" name="utcheckning" />
+          </div>
+
+          <div class="formular-rad">
+            <label for="rumstyp">Rumstyp</label>
+            <select id="rumstyp" name="rumstyp">
+              <option value="">Välj rumstyp</option>
+              <option value="enkelrum">Enkelrum</option>
+              <option value="dubbelrum">Dubbelrum</option>
+              <option value="svit">Svit</option>
+            </select>
+          </div>
+
+          <div class="formular-rad">
+            <label for="ovrigt">Övrigt</label>
+            <textarea id="ovrigt" name="ovrigt" placeholder="Övriga önskemål eller frågor..."></textarea>
+          </div>
+
+          <button type="submit" class="skicka-knapp">Skicka bokning</button>
+
+        </form>
+      </div>
+
+      <!-- Rumsinformation -->
+      <div class="kort">
+        <h2>Rumsinformation</h2>
+        <ul>
+          <li>• Enkelrum fr. 895 kr/natt</li>
+          <li>• Dubbelrum fr. 1 295 kr/natt</li>
+          <li>• Svit fr. 2 495 kr/natt</li>
+        </ul>
+
+        <h2 class="mt-large">Ingår i priset</h2>
+        <ul>
+          <li>• Frukostbuffé</li>
+          <li>• Gratis Wi-Fi</li>
+          <li>• Gratis parkering</li>
+          <li>• Tillgång till gym och spa</li>
+        </ul>
+
+        <h2 class="mt-large">Avbokning</h2>
+        <p>Kostnadsfri avbokning upp till 48 timmar före ankomst.
+        Vid senare avbokning debiteras en nätts vistelse.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SIDFOT -->
+  <footer>
+    <p>Hotell Bright &nbsp;|&nbsp; Föreningsgatan 41, &nbsp;21551 Malmö &nbsp;|&nbsp; 012–12 34 56</p>
+  </footer>
+
+</body>
+</html>

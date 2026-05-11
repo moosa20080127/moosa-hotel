@@ -1,0 +1,437 @@
+/* ===========================
+   Hotell Bright – Gemensam CSS
+   =========================== */
+
+/* --- CSS-variabler --- */
+:root {
+  --nav-bg:        #2c3a4a;
+  --nav-text:      #f0ebe3;
+  --active-bg:     #7a5c10;   /* mörkare guld – vit text klarar 5.4:1 */
+  --active-text:   #ffffff;
+  --page-bg:       #f0ebe3;
+  --card-bg:       #c5b49a;
+  --card-bg-light: #d0c4b0;
+  --footer-bg:     #a89880;   /* mörkare sidfot */
+  --text-dark:     #1a1a1a;
+  --text-muted:    #2e2e2e;   /* mörkare – klarar 4.5:1 på alla bakgrunder */
+  --input-bg:      #ffffff;
+  --border-radius: 14px;
+  --font-heading:  'Playfair Display', Georgia, serif;
+  --font-body:     'Source Sans 3', 'Trebuchet MS', sans-serif;
+  --shadow:        0 2px 10px rgba(0,0,0,0.12);
+}
+
+/* --- Reset & grund --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--page-bg);
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+/* ===========================
+   HEADER
+   =========================== */
+.site-header {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: stretch;
+  background-color: var(--page-bg);
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.logo-wrap img {
+  max-width: 150px;
+  height: auto;
+}
+
+.header-img {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===========================
+   NAVIGERING
+   =========================== */
+nav {
+  background-color: var(--nav-bg);
+  position: relative;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: stretch;
+  max-width: 100%;
+}
+
+nav a {
+  display: inline-block;
+  padding: 16px 40px;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+nav a.aktiv {
+  background-color: var(--active-bg);
+  color: var(--active-text);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Hamburgermeny (dold på desktop) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: var(--nav-text);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ===========================
+   HUVUDINNEHÅLL
+   =========================== */
+main {
+  padding: 30px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tva-kolumner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ===========================
+   KORT / PANELER
+   =========================== */
+.kort {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.kort h1,
+.kort h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 18px;
+}
+
+.kort h1 { font-size: 1.9rem; }
+.kort h2 { font-size: 1.4rem; }
+
+.kort p {
+  text-align: left;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.kort ul {
+  list-style: none;
+  padding: 0;
+}
+
+.kort ul li {
+  padding: 6px 0;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.kort ul li:last-child { border-bottom: none; }
+
+/* Öppettider-lista */
+.oppettider {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.oppettider li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.oppettider li .dag {
+  min-width: 70px;
+  font-weight: 600;
+}
+
+/* ===========================
+   BILDGALLERI
+   =========================== */
+.galleri-rubrik {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  margin: 36px 0 16px;
+}
+
+.galleri {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.galleri-bild {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.galleri-bild img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.galleri-bild:hover img {
+  transform: scale(1.06);
+}
+
+.galleri-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.55));
+  color: #fff;
+  padding: 10px 14px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   FORMULÄR
+   =========================== */
+.formular {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.formular-rad {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.formular-rad label {
+  color: var(--text-dark);
+  font-weight: 400;
+}
+
+.formular-rad input,
+.formular-rad textarea,
+.formular-rad select {
+  background-color: var(--input-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  width: 100%;
+}
+
+.formular-rad textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.skicka-knapp {
+  align-self: flex-start;
+  margin-top: 8px;
+  background-color: var(--active-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.skicka-knapp:hover {
+  background-color: #9a7c25;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   KARTA (hitta.html)
+   =========================== */
+.karta-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.karta-wrapper iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+}
+
+/* ===========================
+   KONTAKTUPPGIFTER IKON-LISTA
+   =========================== */
+.kontakt-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.kontakt-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 12px;
+}
+
+.kontakt-lista li:last-child { border-bottom: none; }
+
+.kontakt-lista .ikon {
+  font-size: 1.2rem;
+  min-width: 26px;
+  text-align: center;
+}
+
+/* ===========================
+   SIDFOT
+   =========================== */
+footer {
+  background-color: var(--footer-bg);
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 30px;
+}
+
+/* Mellanrum-klasser (ersätter inline style="margin-top:...") */
+.mt-medium { margin-top: 16px; }
+.mt-large  { margin-top: 24px; }
+
+/* Säkerställ god kontrast i sidfoten */
+footer {
+  color: var(--text-dark);
+}
+
+/* Bekräftelsemeddelande vid formulärinlämning */
+.bekraftelse {
+  margin-top: 16px;
+  padding: 12px 18px;
+  background-color: #d4edda;
+  color: #276140;
+  border: 1px solid #a8d5b5;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  animation: tonaIn 0.4s ease;
+}
+
+@keyframes tonaIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   RESPONSIV – TABLET
+   =========================== */
+@media (max-width: 900px) {
+  .tva-kolumner {
+    grid-template-columns: 1fr;
+  }
+
+  .galleri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===========================
+   RESPONSIV – MOBIL
+   =========================== */
+@media (max-width: 600px) {
+  .site-header {
+    grid-template-columns: 140px 1fr;
+  }
+
+  .logo-wrap img { max-width: 110px; }
+
+  .header-img { height: 100px; }
+
+  /* Hamburgermeny */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: stretch;
+    display: none;
+  }
+
+  .nav-inner.oppet {
+    display: flex;
+  }
+
+  nav a {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .galleri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formular-rad {
+    grid-template-columns: 1fr;
+  }
+
+  .kort { padding: 20px; }
+}
